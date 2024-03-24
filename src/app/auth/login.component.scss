@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(90deg, rgba(82,142,207,1) 0%, rgba(36,38,170,1) 35%, rgba(36,38,121,1) 100%);
+    
+}
+
+.title{
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    margin-top:50px;
+    color:white;
+    h2{
+        font-size: xx-large;
+    }
+}
+.sign-up{
+    margin: auto;
+    padding: 5px;
+}
+
+.login-center{
+    margin: auto;
+    width: 400px;
+    border-color: white;
+    border-width: 3px;
+    border-style: inset;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(82,142,207,1) 0%, rgba(36,38,170,1) 35%, rgba(36,38,121,1) 100%);
+
+    >p{
+        padding: 20px;
+        font-size: x-large;
+        text-align: center;
+        color:white;
+    }
+
+
+}
+
+.login-form{
+    padding: 5% 20%;
+   
+}
+
+button{
+    background-color: blue;
+}
+.login-center div{
+    color:white;
+    display: flex;
+    justify-content: center;
+    a{
+        color:white;
+    }
+}
+
+.inputbox{
+    height: 70px;
+    margin: 10px;
+}

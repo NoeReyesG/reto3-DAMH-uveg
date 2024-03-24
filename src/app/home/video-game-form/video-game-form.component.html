@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+
+<section>
+    <div> Agregar nuevo videojuego</div>
+    <form [formGroup]="addGameForm">
+
+        <div class="layoutForm">
+            <mat-form-field style="width:100%;">
+                <mat-label>Agregar título</mat-label>
+                <input type="text" matInput id="title" name="title" formControlName="title">
+            </mat-form-field>
+
+            <mat-form-field style="width:100%;">
+                <mat-label>Clasificación</mat-label>
+                <input type="number" matInput id="rated" name="rated" formControlName="rated">
+            </mat-form-field>
+        </div>
+
+        <div class="layoutForm">
+            <mat-form-field style="width:100%">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput id="description" name="description" formControlName="description">Agregar Descripción</textarea>
+            </mat-form-field>
+        </div>
+        <div class="layoutForm">
+            <mat-form-field style="width:100%;">
+                <mat-label>Fecha</mat-label>
+                <input type="date" matInput id="release-date" name="release-date" formControlName="releaseDate">
+            </mat-form-field>
+
+            <mat-form-field style="width:100%;">
+                <mat-label>Descargas</mat-label>
+                <input type="number" matInput id="downloads" name="downloads" formControlName="downloads">
+            </mat-form-field>
+        </div>
+        
+        <div class="checkbox">
+            <mat-checkbox color="primary" formControlName="comingSoon">Proximamente</mat-checkbox>    
+        </div>
+        <div class="button">
+            <button mat-raised-button color="primary" style="width: 50%;">Agregar</button>
+        </div>
+    </form>
+
+</section>

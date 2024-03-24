@@ -1,0 +1,27 @@
+section{
+    margin: 50px 200px;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 25px;
+
+    >div{ 
+        padding:5px 35px;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    .layoutForm{
+        display:flex;
+        margin:20px 0;
+        *{
+            margin: 0 15px;
+        }
+    }
+    .checkbox{
+        margin:20px;
+    }
+    .button{
+        margin:10px;
+        display:flex;
+        justify-content: end;
+    }
+}

@@ -1,0 +1,47 @@
+<div class="title">
+    <h2>Registro</h2>
+</div>
+
+<div class="color">
+
+<section class="login-center">
+        <p> Bienevenido!</p>
+        <form class="login-form" [formGroup]="signUpForm">
+            <div class="inputbox">
+                <mat-form-field>
+                    <mat-label>Usuario</mat-label>
+                    <input matInput placeholder="username" formControlName="username">
+                    <mat-error>Ingresa tu nombre de Usuario</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="inputbox">
+                <mat-form-field>
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                    <mat-error>Ingresa tu contraseña</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="inputbox">
+                <mat-form-field >
+                    <mat-label>Confirma tu contraseña</mat-label>
+                    <input matInput type="password" placeholder="Confirmación" formControlName="confirm">
+                    <mat-error>Confirma tu contraseña</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="sign-up">
+                <p>Ya tienes cuenta? <a routerLink="/auth/login">Inicia Sesion</a></p>
+            </div>
+            @if (errorMessage){
+            <div class="errorMessage">
+                {{errorMessage}}
+            </div>
+             }   
+            <div>    
+                <button mat-raised-button color="primary" class="button" (click)="signUp()">Registrarse</button>
+            </div>
+        </form>
+
+</section>
+</div>
