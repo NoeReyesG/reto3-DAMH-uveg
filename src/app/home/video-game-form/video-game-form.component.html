@@ -14,6 +14,7 @@
             <mat-form-field style="width:100%;">
                 <mat-label>Clasificación</mat-label>
                 <input type="number" matInput id="rated" name="rated" formControlName="rated">
+                <mat-error>Ingresa una clasificación Valida</mat-error>
             </mat-form-field>
         </div>
 
@@ -27,6 +28,7 @@
             <mat-form-field style="width:100%;">
                 <mat-label>Fecha</mat-label>
                 <input type="date" matInput id="release-date" name="release-date" formControlName="releaseDate">
+                <mat-error>Ingresa una fecha Valida</mat-error>
             </mat-form-field>
 
             <mat-form-field style="width:100%;">
@@ -34,12 +36,11 @@
                 <input type="number" matInput id="downloads" name="downloads" formControlName="downloads">
             </mat-form-field>
         </div>
-        
         <div class="checkbox">
             <mat-checkbox color="primary" formControlName="comingSoon">Proximamente</mat-checkbox>    
         </div>
         <div class="button">
-            <button mat-raised-button color="primary" style="width: 50%;">Agregar</button>
+            <button mat-raised-button color="primary" style="width: 50%;" (click)="onSubmit()">Agregar</button>
         </div>
     </form>
 

@@ -11,13 +11,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
+import { DisplayGamesComponent } from './display-games/display-games.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     NavbarComponent,
-    VideoGameFormComponent
+    VideoGameFormComponent,
+    DisplayGamesComponent
   ],
   imports: [
     CommonModule,
