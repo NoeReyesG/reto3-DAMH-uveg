@@ -1,1 +1,30 @@
-<p>display-games works!</p>
+
+<section>
+    @for (game of games; track $index) {
+        <div class="card">
+            <p class="card-title">Titulo: {{game.title}}</p>
+            <div class="img-container">
+                <img src="{{game.img}}" alt="">
+            </div> 
+            <div class="fecha"> 
+                <p>Lanzamiento: 
+                    @if(game.releasedDate){<span style="font-weight: bold;">{{game.releasedDate | date}}</span>}
+                    @else{<span> S/F </span>}
+                </p>
+                <p>Descargas:
+                    @if(game.downloads > 0){
+                    {{game.downloads}}
+                    }
+                    @else{
+                        N/A
+                    }
+                </p>
+            </div>
+            <p style="font-size: large;">Descripción:</p> 
+            <p>{{game.description}}</p>
+            <div class="add-button">  
+                <button mat-raised-button style="background-color:#242679" >Agregar al carrito</button>
+            </div>
+        </div>
+    }
+</section>

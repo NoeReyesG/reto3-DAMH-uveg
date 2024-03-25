@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent {
-
+  filter: string="all";
   constructor(
     private router: Router,
   ){}
@@ -16,6 +16,10 @@ export class HomeComponent {
   onLogOut():void{
     localStorage.clear();
     this.router.navigate(["auth/login"]);
+  }
+
+  passFilter(filter:string){
+    this.filter = filter;
   }
 
 }

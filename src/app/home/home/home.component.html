@@ -1,8 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (emitFilter)="passFilter($event)"></app-navbar>
 
-<section>
 
-    <div>
-        <img src="../../../assets/game.jpg" alt="uNA IMAGEN" style="width: 150px; margin:5px;">
-    </div>
-</section>
+<app-display-games [filter]="filter"></app-display-games>

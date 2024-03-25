@@ -1,11 +1,13 @@
 
 <nav class="navbar">
-    <p class="webpageTitle">UVEG Games</p>
+    <a routerLink="''">
+        <p class="webpageTitle">UVEG Games</p>
+    </a>
     <!-- <span><img src="../../../assets/game.jpg" alt="uNA IMAGEN" style="width: 25px;"></span> -->
     <ul>
-        <li><a href="">Más Populares</a></li>
-        <li><a href="">Más Descargados</a></li>
-        <li><a href="">Proximamente</a></li>
+        <li (click)="filterGame('famous')">Más Populares</li>
+        <li (click)="filterGame('downloaded')">Más Descargados</li>
+        <li (click)="filterGame('coming')">Proximamente</li>
         <li><a href="" routerLink="add-game">Agregar</a></li>
     </ul>
     <div><button mat-raised-button color="primary" (click)="onLogOut()">Salir</button></div>

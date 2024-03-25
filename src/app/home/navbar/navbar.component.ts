@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   
+  @Output() emitFilter = new EventEmitter<string>();
   constructor(
     private router: Router,
   ){}
@@ -15,5 +16,24 @@ export class NavbarComponent {
   onLogOut():void{
     localStorage.clear();
     this.router.navigate(["auth/login"]);
+  }
+
+  filterGame(filter:string){
+    switch(filter){
+      case "all":
+        this.emitFilter.emit('all');
+        break;
+      case "famous":
+        this.emitFilter.emit('famous');
+        break;
+      case "downloaded":
+        this.emitFilter.emit('downloaded');
+        break;
+      case "coming":
+        this.emitFilter.emit('coming');
+        break;
+      default:
+        this.emitFilter.emit('all');
+    }
   }
 }
