@@ -19,6 +19,7 @@ export class NavbarComponent {
   }
 
   filterGame(filter:string){
+    this.router.navigate(['home']);
     switch(filter){
       case "all":
         this.emitFilter.emit('all');

@@ -1,9 +1,9 @@
 
 <nav class="navbar">
-    <a routerLink="''">
+    <a routerLink="''" (click)="filterGame('all')">
         <p class="webpageTitle">UVEG Games</p>
     </a>
-    <!-- <span><img src="../../../assets/game.jpg" alt="uNA IMAGEN" style="width: 25px;"></span> -->
+
     <ul>
         <li (click)="filterGame('famous')">Más Populares</li>
         <li (click)="filterGame('downloaded')">Más Descargados</li>
